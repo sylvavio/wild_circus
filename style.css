@@ -1,3 +1,412 @@
 /* Afin de valider ton code CSS, clic sur la petite flèche en haut à droite de cette fenêtre. Pour rappel, tu peux jeter un oeil par ici pour en savoir un peu plus: https://blog.codepen.io/2017/10/11/analyze-css-now-using-stylelint/ */
 
 /* Ecris ici ton code CSS */
+
+/* VARIABLES */
+
+:root {
+    --font-hero: 'Amatic SC', cursive;
+    --font-normal:'Open Sans Condensed', sans-serif;
+
+    --text-color: rgb(14, 14, 14);
+    --color-bg-main: rgb(247, 247, 247);
+    --color-accent: rgb(47, 160, 175);
+
+    --nav-action-duration: 0.5s
+}
+
+
+/* Utility */
+
+._blur {
+    animation: blurFx 0.3s ease-in 1 reverse;
+}
+
+._unblur {
+    animation: blurFx 0.6s ease-in 1 running;
+}
+
+
+/* INIT */
+
+* {
+    font-family: var(--font-normal);
+    font-size: 16px;
+}
+
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-hero);
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+button {
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 10px rgba(20, 20, 20, 0.2);
+    color: var(--color-bg-main);
+    cursor: pointer;
+    font-family: var(--font-hero);
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+}
+
+body {
+    background-color: var(--color-accent);
+    display: flex;
+    font-size: 1rem;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.main__container {
+    background-color:var(--color-bg-main);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    min-width: 350px;
+    max-width: 800px;
+    overflow: hidden;
+}
+/* HEADER and NAV */
+
+.header-img__container {
+    background: linear-gradient(0deg, var(--color-bg-main), rgba(255, 255, 255, 0)), url('./img/header__img6.jpg');
+    background-position:  center;
+    background-size: cover;
+    min-height: 20vw;
+}
+
+.nav__container {
+    display: flex;
+    flex-direction: column;
+    max-height: 18rem;
+    overflow: hidden;
+    transition: all var(--nav-action-duration) ease-out;
+}
+
+#nav__icon {
+    transform: scaleX(-1);
+    width: 2.4rem;
+    
+}
+
+#toggler__icon{
+    transition: all var(--nav-action-duration) ease-in;
+}
+
+.nav__icon-action {
+    transform: rotate(-45deg);
+}
+
+.collapsed {
+    max-height: 4rem;
+}
+
+nav {
+    padding: 1rem;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    padding: 0.5rem;
+}
+
+nav li a {
+    font-family: var(--font-hero);
+    font-size: 1.5rem;
+}
+
+.nav-collapsed__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav__toggler {
+    cursor: pointer;
+    margin: auto 1rem;
+    text-align: center;
+}
+
+#toggler__icon {
+    font-size: 2rem;
+}
+
+/* SECTIONS */
+
+.section__spacer {
+    margin: 1rem;
+}
+
+/* SECTION PERFORMANCES */
+
+#performances__section ul {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+}
+
+#performances__section li {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+/* CAROUSEL */
+
+.carousel__container {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    max-height: 400px;
+}
+
+.prev-next__btn {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 0.5rem;
+    text-align: center;
+    width: 10%;
+}
+
+.prev-next__btn p {
+    font-family: var(--font-hero);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.carousel__element-container {
+    display :none;
+    flex-direction: column;
+}
+
+._active {
+    display: flex;
+}
+
+._hidden {
+    display: hidden;
+}
+
+.carousel__element {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 60vw;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    top: 0;
+}
+
+.carousel__element-title {
+    font-size: 3rem;
+}
+
+.carousel__element-desc {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.452);
+    width: 75%;
+}
+
+.carousel__element-desc:before,
+.carousel__element-desc:after {
+    font-size: 4rem;
+    line-height: 1rem;
+    position: relative;
+}
+
+.carousel__element-desc::before {
+    content: '“';
+    left: -1rem;
+    top: 1rem;
+}
+.carousel__element-desc::after {
+    content: '„';
+    right: -1rem;
+}
+
+
+.carousel__element-desc::first-letter {
+    font-family: var(--font-hero);
+    font-size: 2rem;
+}
+
+#bg1 {
+    background-image:linear-gradient(0deg, var(--color-bg-main), rgba(255, 255, 255, 0.233), var(--color-bg-main)), url('./img/carousell__element1.jpg');
+}
+#bg2 {
+    background-image:linear-gradient(0deg, var(--color-bg-main), rgba(255, 255, 255, 0.233), var(--color-bg-main)), url('./img/carousell__element2.jpg');
+}
+#bg3 {
+    background-image:linear-gradient(0deg, var(--color-bg-main), rgba(255, 255, 255, 0.233), var(--color-bg-main)), url('./img/carousell__element3.jpg');
+}
+
+/* PRICES TABLE */
+
+#prices {
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+#prices th {
+    background-color: var(--color-accent);
+    color: var(--color-bg-main);
+    padding: 4px 10px;
+}
+
+#prices td {
+    padding: 10px;
+}
+
+#prices .comment {
+    font-size: 0.7rem;
+}
+
+/* TRANSITION */
+
+.transition {
+    background-image:linear-gradient(0deg, var(--color-bg-main), rgba(255, 255, 255, 0),rgba(255, 255, 255, 0), var(--color-bg-main)), url('./img/transition__img4.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 15rem;
+}
+
+/* CONTACT FORM */
+
+#contact__form {
+    margin: auto;
+    max-width: 500px;
+    padding-bottom: 2rem;
+}
+
+.form__element {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+.form__submit-container {
+    align-self: flex-end; 
+    margin-top: 0.5rem;
+    
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--color-accent);
+    display: flex;
+    margin: auto;
+    padding: 1rem 0;
+    justify-content: space-evenly;
+}
+
+footer div, a {
+    font-size: 0.8rem;
+}
+
+
+/* NOTIF */
+
+.notif {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: -100px;
+    transition: all 0.4s cubic-bezier(.57,1.61,.89,.87);
+    width: 100%;
+}
+
+.notif__display {
+    top: -5px;
+}
+
+.notif__success {
+    background-color: var(--color-accent);
+}
+
+.notif__failure {
+    background-color: rgb(255, 60, 0);
+}
+
+#notif__content {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+/* keyframes */
+
+@keyframes blurFx {
+    from { filter: blur(100px);}
+    to {filter: blur(0px);}
+}
+/* RESPONSIVE */
+
+@media screen and (min-width: 600px) {
+    
+    .nav__container {
+        flex-direction: row;
+    }
+    
+    .nav__toggler {
+        display: none;
+    }
+
+    nav li {
+        display: inline;
+    }
+
+    .nav__collapsed {
+        margin: auto 0 auto 2rem;
+    }
+
+    #performances__section ul {
+        flex-direction: row;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    #performances__section li {
+        margin: 0.5rem;
+    }   
+}
+
+/* SI VOUS LISEZ CECI J'ESPERE QUE JE SERAI RECRUTE A LA WCS BDX :) */

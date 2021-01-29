@@ -3,82 +3,298 @@ Click sur l'onglet "Validate by Direct Input" et colle ton code HTML, click ensu
 Tu peux jeter un oeil par ici pour en savoir un peu plus: https://www.243tech.com/valider-vos-codes-html-et-css-sur-validator-w3-org/ -->
 
 <!DOCTYPE html>
-<html  lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Wild Circus</title>
-</head>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <!-- LINKS -->
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans+Condensed:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <!-- todo SEO HERE -->
+        <title>Wild Circus</title>
+    </head>
 
-<body>
-    <header>
-      <h1>Wild Circus</h1>
-      <nav>
-        <ul>
-            <!-- TODO: Les liens du menu doivent nous emmener vers les sections correspondantes dans la page -->
-            <li><a>Performances</a></li>
-            <li><a>About Us</a></li>
-            <li><a>Prices</a></li>
-            <li><a>Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <body>
+        <div class="main__container">
+            <header>
+                <div class="header-img__container">
+                    <nav>
+                        <div
+                            class="nav__container collapsed"
+                            id="nav__container-main-nav"
+                        >
+                            <div class="nav-collapsed__container">
+                                <h1 class="brand">Wild Circus</h1>
+                                <div class="nav__toggler">
+                                    <div id="toggler__icon">
+                                        <img
+                                            src="./img/hamburger.png"
+                                            id="nav__icon"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav__collapsed">
+                                <ul>
+                                    <!-- TODO: Les liens du menu doivent nous emmener vers les sections correspondantes dans la page -->
+                                    <li>
+                                        <a
+                                            class="nav__link"
+                                            href="#performances__section"
+                                            >Performances</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="nav__link"
+                                            href="#about-us__section"
+                                            >About Us</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="nav__link"
+                                            href="#prices__section"
+                                            >Prices</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="nav__link"
+                                            href="#contact-us__section"
+                                            >Contact</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
 
-    <section>
-      <h2>Performances</h2>
-      <!-- TODO: En utilisant du css place ces trois performances ("lough", "dream, "marvel at") sur la même ligne en enlevant le point généré par la balise "li". Attention, utilise bien le css pour aligner les éléments, tu ne dois pas enlever les balises "li"-->
-      <ul>
-        <!-- performance 1 -->
-        <li>
-            <h3>Laugh</h3>
-            <p>As an adult, come and discover our irresistible clowns, between practical jokes and pranks let yourself be carried away by their joy and fall back into childhood.</p>
-         </li>
-        <!-- performance 2 -->
-         <li>
-            <h3>Dream</h3>
-            <p>Let yourself be carried away in a world where the real and the imaginary are one, in the company of our talented magicians, discover a wonderful world limited only by your imagination.</p>
-         </li>
-         <!-- performance 3 -->
-         <li>
-            <h3>Marvel at</h3>
-            <p>Tame the untameable in the company of our tamers, between roar and razor-sharp claws, watch these fierce felines turn into sweet kittens.</p>
-         </li>
-      </ul>
-    </section>
+            <section id="performances__section">
+                <div class="section__spacer">
+                    <h2>Performances</h2>
+                    <!-- TODO: En utilisant du css place ces trois performances ("lough", "dream, "marvel at") sur la même ligne en enlevant le point généré par la balise "li". Attention, utilise bien le css pour aligner les éléments, tu ne dois pas enlever les balises "li"-->
+                    <ul>
+                        <!-- performance 1 -->
+                        <li>
+                            <h3>Laugh</h3>
+                            <p>
+                                As an adult, come and discover our irresistible
+                                clowns, between practical jokes and pranks let
+                                yourself be carried away by their joy and fall
+                                back into childhood.
+                            </p>
+                        </li>
+                        <!-- performance 2 -->
+                        <li>
+                            <h3>Dream</h3>
+                            <p>
+                                Let yourself be carried away in a world where
+                                the real and the imaginary are one, in the
+                                company of our talented magicians, discover a
+                                wonderful world limited only by your
+                                imagination.
+                            </p>
+                        </li>
+                        <!-- performance 3 -->
+                        <li>
+                            <h3>Marvel at</h3>
+                            <p>
+                                Tame the untameable in the company of our
+                                tamers, between roar and razor-sharp claws,
+                                watch these fierce felines turn into sweet
+                                kittens.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-    <hr/>
+            <section id="about-us__section">
+                <div class="section__spacer">
+                    <h2>About Us</h2>
+                </div>
+                <div class="carousel__container" id="bg1">
+                    <div class="prev-next__btn" id="prev">
+                        <p>&lt;</p>
+                    </div>
+                    <div
+                        class="carousel__element-container _active"
+                        id="carousel__element1"
+                    >
+                        <div class="carousel__element">
+                            <h3 class="carousel__element-title">
+                                #WE ARE FAMILY
+                            </h3>
+                            <p class="carousel__element-desc">
+                                Funded in 1837 by Alexis Wildus, our circus is
+                                one big family. And because all ages matter we
+                                bring you shows for the whole family.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="carousel__element-container"
+                        id="carousel__element2"
+                    >
+                        <div class="carousel__element">
+                            <h3 class="carousel__element-title">
+                                #WE ARE PERFORMERS
+                            </h3>
+                            <p class="carousel__element-desc">
+                                Our artists achieve crazy performances that are
+                                both the legacy of ancient circus traditions and
+                                astonishing shows from the future of circus art.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="carousel__element-container"
+                        id="carousel__element3"
+                    >
+                        <div class="carousel__element">
+                            <h3 class="carousel__element-title">
+                                #WE ARE WILD
+                            </h3>
+                            <p class="carousel__element-desc">
+                                Each of our shows is a gathering call for a
+                                powerfull experience. Come and feel by yourself
+                                the living magic of the Wild !
+                            </p>
+                        </div>
+                    </div>
 
-    <section>
-      <h2>About Us</h2>
-      <!-- TODO: Cette section n'a pas encore été réalisée, tu as carte blanche pour nous montrer ta créativité -->
-    </section>
+                    <div class="prev-next__btn" id="next">
+                        <p>&gt;</p>
+                    </div>
+                </div>
+                <!-- TODO: Cette section n'a pas encore été réalisée, tu as carte blanche pour nous montrer ta créativité -->
+            </section>
 
-    <hr/>
+            <section id="prices__section">
+                <div class="section__spacer">
+                    <h2>Prices</h2>
+                    <!-- TODO:  Réalise un tableau qui présente les différents prix. Exemple (aggrandis la fenêtre en largeur pour bien voir l'exemple ci-dessous) :
+                        
+                        | Adultes | Enfants de moins de 12 ans | Groupes (plus de 10 personnes) | Ecoles
+                        Semaines hors mercredi  |         |                         |                                |
+                        week-end et mercredi    |         |                         |                                |
+                    -->
+                    <table id="prices">
+                        <thead>
+                            <tr>
+                                <th>Weekdays</th>
+                                <th>Adults</th>
+                                <th>
+                                    Children
+                                    <br />
+                                    <span class="comment">under 12</span>
+                                </th>
+                                <th>
+                                    Groups
+                                    <br />
+                                    <span class="comment">(over 10 pers)</span>
+                                </th>
+                                <th>Schools</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MON, TUE, THU, FRI</td>
+                                <td>15€</td>
+                                <td>8€</td>
+                                <td>12€</td>
+                                <td>Consult us</td>
+                            </tr>
+                            <tr>
+                                <td>WED, SAT, SUN</td>
+                                <td>250€</td>
+                                <td>180€</td>
+                                <td>120€</td>
+                                <td>No way</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="transition"></div>
 
-    <section>
-      <h2>Prices</h2>
-      <!-- TODO:  Réalise un tableau qui présente les différents prix. Exemple (aggrandis la fenêtre en largeur pour bien voir l'exemple ci-dessous) :
-
-                                | Adultes | Enfants de moins de 12 ans | Groupes (plus de 10 personnes) | Ecoles
-        Semaines hors mercredi  |         |                         |                                |
-        week-end et mercredi    |         |                         |                                |
-      -->
-    </section>
-
-    <hr/>
-
-    <section>
-      <h2>Contact Us</h2>
-      <!-- TODO: Réalise un formulaire de contact avec les champs email et message plus un bouton pour envoyer le message. Pense bien à ajouter les labels pour les différents champs
-        Ce formulaire n'a pas besoin d'être fonctionnel, réalise juste la mise en forme.
-      -->
-    </section>
-
-    <footer>
-      <!-- TODO: Entre ton nom et prénom.
-        Mets en place un lien vers le site de la Wild Code School (https://wildcodeschool.fr) ainsi que le lien vers ton profil public France.ioi (avec les 16 premiers exercies de réalisés).
-        Tu peux egalement mettre un lien sur ton nom vers ton site, ton blog ou ton profil github ou linkedin, si tu en a un.
-       -->
-      <p>Wild Circus by Sylvain Viole - <a href="http://www.france-ioi.org/user/perso.php?sLogin=sylvavio" target="_blank">Mon France-IOI</a> - SoloLearn: [lien vers ton profil SoloLearn] - Wild Code School - [Date de réalisation du site]</p>
-    </footer>
-</body>
+            <section id="contact-us__section">
+                <div class="section__spacer">
+                    <h2>Contact Us</h2>
+                    <!-- TODO: Réalise un formulaire de contact avec les champs email et message plus un bouton pour envoyer le message. Pense bien à ajouter les labels pour les différents champs
+                        Ce formulaire n'a pas besoin d'être fonctionnel, réalise juste la mise en forme.
+                    -->
+                    <form action="#" id="contact__form" method="POST">
+                        <div class="form__element">
+                            <label for="fname">First name</label>
+                            <input type="text" name="fname" id="fname" />
+                        </div>
+                        <div class="form__element">
+                            <label for="lname">Last name</label>
+                            <input type="text" name="lname" id="lname" />
+                        </div>
+                        <div class="form__element">
+                            <label for="email">Email*</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="example@abc.com"
+                            />
+                        </div>
+                        <div class="form__element">
+                            <label for="fname">Your message*</label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                cols="20"
+                                rows="5"
+                            ></textarea>
+                        </div>
+                        <div class="form__element">
+                            <div class="form__submit-container">
+                                <button type="submit" id="newsletter__submit">
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <footer>
+                <!-- TODO: Entre ton nom et prénom.
+                        Mets en place un lien vers le site de la Wild Code School (https://wildcodeschool.fr) ainsi que le lien vers ton profil public France.ioi (avec les 16 premiers exercies de réalisés).
+                Tu peux egalement mettre un lien sur ton nom vers ton site, ton blog ou ton profil github ou linkedin, si tu en a un.
+            -->
+                <div class="footer__element">Wild Circus by Sylvain Viole</div>
+                <div class="footer__element">
+                    <a
+                        href="http://www.france-ioi.org/user/perso.php?sLogin=sylvavio"
+                        target="_blank"
+                        >Mon France-IOI</a
+                    >
+                </div>
+                <div class="footer__element">
+                    <a href="https://github.com/sylvavio" target="_blank"
+                        >Mon gitHub</a
+                    >
+                </div>
+                <div class="footer__element">Wild Code School</div>
+                <div class="footer__element">31 janvier 2021</div>
+            </footer>
+            <div class="notif">
+                <span id="notif__content">TEST</span>
+            </div>
+        </div>
+        <!-- DEPENDENCIES -->
+        <script src="./main.js"></script>
+    </body>
 </html>
